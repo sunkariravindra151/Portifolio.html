@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+     <script src="https://use.fontawesome.com/3903c9d7fd.js"></script>
+    <title>Resume</title>
+</head>
+<body>
+    <header>
+        <div class="navbar-container">
+            <ul class="menu">
+                <li class="menu_list">
+                    <span class="front fas fa-home"></span>
+                    <a href="#home" class="side">home</a>
+                </li>
+                <li class="menu_list">
+                    <span class="front fas fa-info"></span>
+                    <a href="#about-me" class="side">about</a>
+                </li>
+                <li class="menu_list">
+                    <span class="front fas fa-briefcase"></span>
+                    <a href="#project" class="side">projects</a>
+                </li>
+                <li class="menu_list fourth-menu">
+                    <span class="front fas fa-paper-plane"></span>
+                    <a href="#features" class="side">contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="card-container" id="home">
+        <div class="name-container">
+            <div id="img-container">
+                <img id="portrait_name" src="icons8-user-96.png" alt="portrait">
+            </div>
+        </div>
+        <div id="float_container">
+            <h2 class="move_h2">Hello!</h2>
+            <h3 class="move_h3">My Self Ravindra</h3>
+        </div>
+    </div>
+    <div class="skill-section">
+        <h2 class="section-title">SKILLS</h2>
+           <div class="body-text">
+              <ul>
+                 <li class="li_text">Programming Languages: Proficient in C and Python.</li>
+                 <li class="li_text">Web Development: Skilled in HTML5, CSS, and JavaScript.</li>
+                 <li class="li_text">Problem-solving:  Beginner.</li>
+                 <li class="li_text">Frameworks: Exploring React.js, Node.js, and Express.js.</li>
+                 <li class="li_text">Communication: Developing excellent written and verbal communication skills.</li>
+              </ul>
+            </div>
+            <div class="skill_bar">
+                <p>HTML</p>
+                <div class="skill">
+                    <div class="html">85%</div>
+                </div>
+                <p>CSS</p>
+                <div class="skill">
+                    <div class="css">80%</div>
+                </div>
+                <p>JS</p>
+                <div class="skill">
+                    <div class="js">50%</div>
+                </div>
+                <p>C</p>
+                <div class="skill">
+                    <div class="c">65%</div>
+                </div>
+            </div>  
+    </div> 
+    <div class="about-us" id="about-me">
+        <div class="container">
+            <h2 class="h1 text-center">About me</h2>
+            <p class="responsive-paragraph">Greetings, everyone! </p>
+            <p class="responsive-paragraph"> I go by the name Ravindra, and I come from the beautiful state of Andhra Pradesh in India. I'm currently in my second year, pursuing a B.Tech in Computer Science & Engineering. My true passion lies in harnessing my ever-expanding knowledge and honed skills in programming, data structures, and algorithms to tackle intricate problems and engineer innovative solutions in the vast realm of technology.</p>
+        </div>
+    </div> 
+    <section class="section">
+        <div class="header text-center" id="project">
+            <div class="overlay">
+                <div class="container">
+                    <h2 class="h1 text-center">PROJECTS</h2>
+                    <div class="plan float-left"><a href="https://sunkariravindra151.github.io/drum_kit/" class="drum">Drum kit</a></div>
+                    <div class="plan float-left"><a href="https://sunkariravindra151.github.io/quote-generator/" class="drum">Random Quote Generator</a></div>
+                    <div class="clearfix"></div>
+                    <div class="order hidden-xs"><a href=" https://sunkariravindra151.github.io/hospital_website/">Hospital website</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="features" id="features">
+            <div class="container">
+                <h2 class="h1 text-center">Get In Touch</h2>
+                <div class="feat float-left">
+
+                    <p class="responsive-paragraph">Phone: +91 8328583288</p>
+                    <p class="responsive-paragraph">Email: sunkariravindra03@gmail.com</p>
+                    <section id="contact">
+                        <div class="contact-box">
+                            <div class="contact-links">
+                                <h2>CONTACT</h2>
+                                <div class="links">
+                                    <div class="link">
+                                        <a><img src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin"></a>
+                                    </div>
+                                    <div class="link">
+                                        <a><img src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github"></a>
+                                    </div>
+                                    <div class="link">
+                                        <a><class="" alt="email"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-form-wrapper">
+                                <form id="myForm">
+                                    <div class="form-item">
+                                        <input type="text" placeholder="Name*" name="sender" id="name" required>
+                                        <span class="error-message" id="name-error"></span>
+                                    </div>
+                                    <div class="form-item">
+                                        <input type="email" placeholder="Email" name="email" id="email" required>
+                                        <span class="error-message" id="email-error"></span>
+                                    </div>
+                                    <div class="form-item">
+                                        <textarea placeholder="Message" name="message" id="message" required></textarea>
+                                        <span class="error-message" id="message-error"></span>
+                                    </div>
+                                    <button class="submit-btn" type="submit">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                
+                    <script>
+                        document.getElementById("myForm").addEventListener("submit", function(event) {
+                            const name = document.getElementById("name");
+                            const email = document.getElementById("email");
+                            const message = document.getElementById("message");
+                    
+                            let isValid = true;
+                    
+                        
+                            const nameError = document.getElementById("name-error");
+                            const emailError = document.getElementById("email-error");
+                            const messageError = document.getElementById("message-error");
+                            
+                            nameError.textContent = "";
+                            emailError.textContent = "";
+                            messageError.textContent = "";
+                    
+                            
+                            if (!isValidName(name.value.trim())) {
+                                isValid = false;
+                                nameError.textContent = "Name is required";
+                                name.classList.add("is-invalid");
+                            } else {
+                                nameError.textContent = "";
+                                name.classList.remove("is-invalid");
+                            }
+                    
+                            
+                            if (!isValidEmail(email.value.trim())) {
+                                isValid = false;
+                                emailError.textContent = "Invalid email format";
+                                email.classList.add("is-invalid");
+                            } else {
+                                emailError.textContent = "";
+                                email.classList.remove("is-invalid");
+                            }
+                    
+                           
+                            if (!isValidMessage(message.value.trim())) {
+                                isValid = false;
+                                messageError.textContent = "Message is required";
+                                message.classList.add("is-invalid");
+                            } else {
+                                messageError.textContent = "";
+                                message.classList.remove("is-invalid");
+                            }
+                    
+                            if (!isValid) {
+                                event.preventDefault(); 
+                            } else {
+                                alert("Form submitted successfully!");
+                            }
+                        });
+                    
+                        function isValidName(name) {
+                            const namePattern = /^[A-Za-z\s]+$/;
+                            return namePattern.test(name);
+                        }
+                    
+                        function isValidEmail(email) {
+                            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            return emailPattern.test(email);
+                        }
+                    
+                        function isValidMessage(message) {
+                            return message.trim() !== "";
+                        }
+                    </script>  
+</body>
+</html>
